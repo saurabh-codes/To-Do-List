@@ -1,0 +1,145 @@
+/* General Values Start */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+body{
+    background-image: linear-gradient(120deg, #1c8ba7, #6dd5ed);
+    color: #42275a;
+    min-height: 100vh;
+}
+
+li{
+    list-style: none;
+}
+
+/* End General Values */
+
+
+/* TO-DO List Section Start */
+header{
+    font-size: 1.5rem;
+}
+
+header,
+form{
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input,
+form button{
+    padding: 0.5rem;
+    font-size: 2rem;
+    border: none;
+    background: #1c8ba7;
+}
+
+form button{
+    color: #42275a;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+form button:hover{
+    background: #42275a;
+    color: #1c8ba7;
+}
+
+.todo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-list{
+    min-width: 30%;
+}
+
+.todo{
+    margin: 0.5rem;
+    background: #1c8ba7;
+    color: #42275a;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.5s ease-in-out;
+}
+
+.todo li{
+    flex: 1;
+}
+
+.trash-btn,
+.complete-btn{
+    background-color: #ff4e50;
+    color: #42275a;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.complete-btn{
+    background: #368863;
+}
+
+.todo-item{
+    padding: 0rem 0.5rem;
+}
+
+.fa-square-check,
+.fa-trash-check{
+    pointer-events: none;
+}
+
+.completed{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.fall{
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+
+select{
+    appearance: none;
+    outline: none;
+    border: none;
+    color: #42275a;
+    width: 10rem;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+.select{
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;   
+}
+
+.select::after{
+    content: "\25BC";
+    position: absolute;
+    background: #42275a;
+    color: #1c8ba7;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.select:hover::after{
+    background: #1c8ba7;
+    color: #42275a;
+}
+
+/* End TO-DO List Section */
